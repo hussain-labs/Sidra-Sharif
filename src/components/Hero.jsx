@@ -14,7 +14,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-void-black/50 z-0"></div>
 
             {/* Navbar */}
-            <div className="z-20 w-full">
+            <div className="z-20 w-full fixed">
                 <Navbar />
             </div>
 
