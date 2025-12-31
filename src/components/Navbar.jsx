@@ -1,0 +1,68 @@
+import React, { useState } from 'react';
+import logo from '../assets/images/logo.png';
+
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const navLinks = ['About', 'Work', 'Contact', 'Services'];
+    const toggleMenu = () => setIsOpen(!isOpen);
+
+    return (
+        <nav className="max-w-[1574px] w-full mx-auto md:mt-[20px] z-50">
+            <div className="bg-[#040A13] rounded-none md:rounded-full px-4 sm:px-8 flex justify-between items-center relative">
+                {/* Logo Section */}
+                <div className="flex items-center gap-3 md:gap-4">
+                    <img src={logo} alt="Logo" className="w-[120px] md:w-[208px] h-auto object-contain" />
+                    <div className="flex flex-col">
+                        <span className="text-white font-bold text-sm md:text-lg">Sidra Sharif</span>
+                        <span className="text-slate-400 uppercase text-xs md:text-base">UI/UX Designer</span>
+                    </div>
+                </div>
+
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center gap-10">
+                    {navLinks.map(link => (
+                        <a key={link} href="#" className="text-slate-300 hover:text-electric-cyan transition-colors text-sm font-medium uppercase tracking-wider">
+                            {link}
+                        </a>
+                    ))}
+                </div>
+
+                {/* Resume Button (Desktop) */}
+                <div className="hidden md:block">
+                    <button className="px-6 py-2 rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)]">
+                        Resume
+                    </button>
+                </div>
+
+                {/* Mobile Menu Toggle */}
+                <div className="md:hidden">
+                    <button onClick={toggleMenu} className="text-white focus:outline-none">
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            {isOpen ? (
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            ) : (
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            )}
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            {/* Mobile Menu Dropdown */}
+            {isOpen && (
+                <div className="md:hidden absolute top-[80px] left-0 w-full bg-[#040A13] border-t border-slate-800 p-4 flex flex-col items-center gap-4 shadow-lg animate-fade-in-down z-50">
+                    {navLinks.map(link => (
+                        <a key={link} href="#" className="text-slate-300 hover:text-electric-cyan transition-colors text-sm font-medium uppercase tracking-wider" onClick={() => setIsOpen(false)}>
+                            {link}
+                        </a>
+                    ))}
+                    <button className="px-6 py-2 w-full rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all">
+                        Resume
+                    </button>
+                </div>
+            )}
+        </nav>
+    );
+};
+
+export default Navbar;
