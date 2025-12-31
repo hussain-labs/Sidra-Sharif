@@ -1,7 +1,6 @@
-import React from 'react';
 import Button from './common/Button';
 import Navbar from './Navbar';
-import bgImg from '../assets/images/bgimg.png';
+import bgImg from '../assets/images/Bgimg.png';
 import img1 from '../assets/images/left_herovector.png';
 import img2 from '../assets/images/right_herovector.png';
 
