@@ -1,29 +1,39 @@
 import React, { useState } from 'react';
-import logo from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navLinks = ['About', 'Work', 'Contact', 'Services'];
+    const navLinks = [
+        { name: 'About', path: '/' },
+        { name: 'Work', path: '/projects' },
+        { name: 'Contact', path: '#' },
+        { name: 'Services', path: '#' },
+    ];
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
         <nav className="max-w-[1574px] h-[116px] w-full mx-auto md:mt-[20px] z-50">
             <div className="bg-[#040A13] rounded-none md:rounded-full px-4 sm:px-8 flex justify-between items-center relative">
                 {/* Logo Section */}
-                <div className="flex items-center gap-3 md:gap-4">
+                <Link to="/" className="flex items-center gap-3 md:gap-4 hover:opacity-80 transition-opacity">
                     <img src={logo} alt="Logo" className="w-[120px] md:w-[208px] h-[100px] object-contain" />
                     <div className="flex flex-col">
                         <span className="text-white font-bold text-sm md:text-lg">Sidra Sharif</span>
                         <span className="text-slate-400 uppercase text-xs md:text-base">UI/UX Designer</span>
                     </div>
-                </div>
+                </Link>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-15">
                     {navLinks.map(link => (
-                        <a key={link} href="#" className="text-slate-300 hover:text-electric-cyan transition-colors text-sm font-medium uppercase tracking-wider">
-                            {link}
-                        </a>
+                        <Link
+                            key={link.name}
+                            to={link.path}
+                            className="text-slate-300 hover:text-electric-cyan transition-colors text-sm font-medium uppercase tracking-wider"
+                        >
+                            {link.name}
+                        </Link>
                     ))}
                 </div>
 
@@ -52,9 +62,14 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden absolute top-[80px] left-0 w-full bg-[#040A13] border-t border-slate-800 p-4 flex flex-col items-center gap-4 shadow-lg animate-fade-in-down z-50">
                     {navLinks.map(link => (
-                        <a key={link} href="#" className="text-slate-300 hover:text-electric-cyan transition-colors text-sm font-medium uppercase tracking-wider" onClick={() => setIsOpen(false)}>
-                            {link}
-                        </a>
+                        <Link
+                            key={link.name}
+                            to={link.path}
+                            className="text-slate-300 hover:text-electric-cyan transition-colors text-sm font-medium uppercase tracking-wider"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {link.name}
+                        </Link>
                     ))}
                     <button className="px-6 py-2 w-full rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all">
                         Resume

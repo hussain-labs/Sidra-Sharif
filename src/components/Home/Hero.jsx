@@ -1,8 +1,8 @@
-import Button from './common/Button';
+import Button from '../common/Button';
 import Navbar from './Navbar';
-import bgImg from '../assets/images/Bgimg.png';
-import img1 from '../assets/images/left_herovector.png';
-import img2 from '../assets/images/right_herovector.png';
+import bgImg from '../../assets/images/Bgimg.png';
+import img1 from '../../assets/images/left_herovector.png';
+import img2 from '../../assets/images/right_herovector.png';
 
 const Hero = () => {
     return (
@@ -11,10 +11,10 @@ const Hero = () => {
             style={{ backgroundImage: `url(${bgImg})`, backgroundColor: '#050505' }}
         >
             {/* Dark Overlay for better text readability */}
-            <div className="absolute inset-0 bg-void-black/50 z-0"></div>
+            {/* <div className="absolute inset-0 bg-void-black/50 z-0"></div> */}
 
             {/* Navbar */}
-            <div className="z-20 w-full fixed">
+            <div className="z-20 w-full">
                 <Navbar />
             </div>
 

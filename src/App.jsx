@@ -1,11 +1,18 @@
 import React from 'react'
-import Hero from './components/Hero'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import Projects from './pages/Projects'
 
 function App() {
   return (
-    <div className="antialiased">
-      <Hero />
-    </div>
+    <Router>
+      <div className="antialiased font-sans">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 
