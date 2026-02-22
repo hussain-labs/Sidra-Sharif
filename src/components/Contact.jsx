@@ -18,19 +18,19 @@ const Contact = () => {
 
     return (
         <section className="bg-void-black py-24 px-4 sm:px-6 lg:px-8 font-sans relative overflow-hidden">
-            <div className="max-w-4xl mx-auto relative z-10">
+            <div className="max-w-[1920px] mx-auto relative z-10">
                 <div className="bg-[#0B1C26] rounded-[48px] p-8 md:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-gray-800/50">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">
                             Have a project idea. <br className="hidden md:block" />
                             Get in touch and let’s chat!
                         </h2>
-                        <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto font-light">
+                        <p className="text-gray-400 text-sm md:text-lg leading-relaxed mx-auto font-light">
                             Need a fresh look for your app or a complete identity for your brand? I combine user-centered design with creative visuals to bring ideas to life. Drop me a line, and let's discuss your vision.
                         </p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl mx-auto">
+                    <form onSubmit={handleSubmit} className="space-y-6 mx-auto">
                         <div>
                             <input
                                 type="email"

@@ -5,6 +5,7 @@ import Services from '../components/Home/Services';
 import Works from '../components/Works';
 import Branding from '../components/Home/Branding';
 import CreativePlayground from '../components/Home/CreativePlayground';
+import Contact from '../components/Contact';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <Branding />
             <Services />
             <CreativePlayground />
+            <Contact />
         </main>
     );
 };
