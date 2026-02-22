@@ -1,8 +1,8 @@
 import Button from '../common/Button';
 import Navbar from './Navbar';
 import bgImg from '../../assets/images/Bgimg.png';
-import img1 from '../../assets/images/left_herovector.png';
-import img2 from '../../assets/images/right_herovector.png';
+// import img1 from '../../assets/images/left_herovector.png';
+// import img2 from '../../assets/images/right_herovector.png';
 
 const Hero = () => {
     return (
@@ -41,12 +41,12 @@ const Hero = () => {
 
                     {/* Floating Vectors - Absolute Positioned */}
                     {/* Hidden on very small screens if needed, or scaled down */}
-                    <div className="absolute hidden lg:block bottom-[-90px] left-0 z-10 w-[30%] md:w-[40%] max-w-[500px] pointer-events-none opacity-60 md:opacity-100">
+                    {/* <div className="absolute hidden lg:block bottom-[-90px] left-0 z-10 w-[30%] md:w-[40%] max-w-[500px] pointer-events-none opacity-60 md:opacity-100">
                         <img src={img1} alt="" className="w-full h-auto object-contain" />
                     </div>
                     <div className="absolute hidden lg:block bottom-[-50px] right-0 z-10 w-[30%] md:w-[40%] max-w-[500px] pointer-events-none opacity-60 md:opacity-100">
                         <img src={img2} alt="" className="w-full h-auto object-contain" />
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

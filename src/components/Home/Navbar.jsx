@@ -13,11 +13,11 @@ const Navbar = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="max-w-[1574px] h-[116px] w-full mx-auto md:mt-[20px] z-50">
-            <div className="bg-[#040A13] rounded-none md:rounded-full px-4 sm:px-8 flex justify-between items-center relative">
+        <nav className="max-w-[1574px] w-full mx-auto md:mt-[20px] z-50 fixed top-0 left-0 right-0 px-2 2xl:px-0">
+            <div className="bg-[#040A13] h-[90px] lg:h-[116px] rounded-none md:rounded-full px-4 sm:px-8 flex justify-between items-center relative">
                 {/* Logo Section */}
-                <Link to="/" className="flex items-center gap-3 md:gap-4 hover:opacity-80 transition-opacity">
-                    <img src={logo} alt="Logo" className="w-[120px] md:w-[208px] h-[100px] object-contain" />
+                <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+                    <img src={logo} alt="Logo" className="h-[60px] lg:h-[80px] object-contain " />
                     <div className="flex flex-col">
                         <span className="text-white font-bold text-sm md:text-lg">Sidra Sharif</span>
                         <span className="text-slate-400 uppercase text-xs md:text-base">UI/UX Designer</span>
