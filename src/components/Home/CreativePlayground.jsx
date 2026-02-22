@@ -1,38 +1,52 @@
-import React from 'react';
-
+import img1 from "../../assets/images/gallery/1.png";
+import img2 from "../../assets/images/gallery/2.png";
+import img3 from "../../assets/images/gallery/3.png";
+import img4 from "../../assets/images/gallery/4.png";
+import img5 from "../../assets/images/gallery/5.png";
+import img6 from "../../assets/images/gallery/6.png";
+import img7 from "../../assets/images/gallery/7.png";
+import img8 from "../../assets/images/gallery/8.png";
+import img9 from "../../assets/images/gallery/9.png";
+import img10 from "../../assets/images/gallery/10.png";
+import img11 from "../../assets/images/gallery/11.png";
+import img12 from "../../assets/images/gallery/12.png";
+import img13 from "../../assets/images/gallery/13.png";
+import img14 from "../../assets/images/gallery/14.png";
+import img15 from "../../assets/images/gallery/15.png";
+import img16 from "../../assets/images/gallery/16.png";
 const CreativePlayground = () => {
   // 16 curated artworks matching the reference image themes
   const columns = [
     // Column 1 - Leftmost
     [
-      { id: 1, src: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&auto=format&fit=crop", alt: "Handmade DIY box" },
-      { id: 2, src: "https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=600&auto=format&fit=crop", alt: "Digital leaf art" },
-      { id: 3, src: "https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?q=80&w=600&auto=format&fit=crop", alt: "Artistic donut" }
+      { id: 1, src: img1, alt: "Handmade DIY box" },
+      { id: 2, src: img2, alt: "Digital leaf art" },
+      { id: 3, src: img3, alt: "Artistic donut" }
     ],
     // Column 2
     [
-      { id: 4, src: "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?q=80&w=600&auto=format&fit=crop", alt: "Blue forest sketch" },
-      { id: 5, src: "https://images.unsplash.com/photo-1508186225823-0963cf9ab0de?q=80&w=600&auto=format&fit=crop", alt: "Starry silhouettes" },
-      { id: 6, src: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=600&auto=format&fit=crop", alt: "Broom art mockup" }
+      { id: 4, src: img4, alt: "Blue forest sketch" },
+      { id: 5, src: img5, alt: "Starry silhouettes" },
+      { id: 6, src: img6, alt: "Broom art mockup" }
     ],
     // Column 3 - Center
     [
-      { id: 7, src: "https://images.unsplash.com/photo-1541963463532-d68292c34b19?q=80&w=600&auto=format&fit=crop", alt: "London bridge sketch" },
-      { id: 8, src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop", alt: "Campfire illustration" },
-      { id: 9, src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop", alt: "Sunset lamp post" },
-      { id: 10, src: "https://images.unsplash.com/photo-1508186225823-0963cf9ab0de?q=80&w=600&auto=format&fit=crop", alt: "Mountain reflection" }
+      { id: 7, src: img7, alt: "London bridge sketch" },
+      { id: 8, src: img8, alt: "Campfire illustration" },
+      { id: 9, src: img9, alt: "Sunset lamp post" },
+      { id: 10, src: img10, alt: "Mountain reflection" }
     ],
     // Column 4
     [
-      { id: 11, src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=600&auto=format&fit=crop", alt: "Butterflies in jar" },
-      { id: 12, src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=600&auto=format&fit=crop", alt: "Forest path" },
-      { id: 13, src: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=600&auto=format&fit=crop", alt: "Pink tree silhouettes" }
+      { id: 11, src: img11, alt: "Butterflies in jar" },
+      { id: 12, src: img12, alt: "Forest path" },
+      { id: 13, src: img13, alt: "Pink tree silhouettes" }
     ],
     // Column 5 - Rightmost
     [
-      { id: 14, src: "https://images.unsplash.com/photo-1460661419201-fd4cecdc8a8b?q=80&w=600&auto=format&fit=crop", alt: "Seasons tree" },
-      { id: 15, src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop", alt: "Pen holder photograph" },
-      { id: 16, src: "https://images.unsplash.com/photo-1482160549825-59d1b23cb208?q=80&w=600&auto=format&fit=crop", alt: "Geometric patterns" }
+      { id: 14, src: img14, alt: "Seasons tree" },
+      { id: 15, src: img15, alt: "Pen holder photograph" },
+      { id: 16, src: img16, alt: "Geometric patterns" }
     ]
   ];
 
@@ -65,11 +79,11 @@ const CreativePlayground = () => {
             else if (colIndex === 1 || colIndex === 3) mtClass = "mt-[80px]";
 
             return (
-              <div key={colIndex} className={`flex flex-col gap-4 w-[220px] ${mtClass}`}>
+              <div key={colIndex} className={`flex flex-col gap-4 ${mtClass}`}>
                 {col.map((item) => (
                   <div
                     key={item.id}
-                    className="w-full rounded-[15px] border-[3px] border-white overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.6)] transform transition-transform duration-500 hover:scale-[1.05] hover:z-20"
+                    className="w-full rounded-[15px] border-[2px] border-white overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.6)] transform transition-transform duration-500 hover:scale-[1.05] hover:z-20"
                   >
                     <img
                       src={item.src}
