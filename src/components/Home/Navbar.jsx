@@ -13,7 +13,7 @@ const Navbar = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="max-w-[1574px] w-full mx-auto md:mt-[20px] z-50 fixed top-0 left-0 right-0 px-2 2xl:px-0">
+        <nav className="max-w-[1574px] w-full mx-auto md:mt-[20px] z-50 fixed top-0 left-0 right-0 md:px-2 2xl:px-0">
             <div className="bg-[#040A13] h-[90px] lg:h-[116px] rounded-none md:rounded-full px-4 sm:px-8 flex justify-between items-center relative">
                 {/* Logo Section */}
                 <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
@@ -39,7 +39,7 @@ const Navbar = () => {
 
                 {/* Resume Button (Desktop) */}
                 <div className="hidden md:block">
-                    <button className="px-6 xl:px-10 py-2 md:py-3 text-[22px] rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)]">
+                    <button className="px-4 lg:px-6 xl:px-10 py-2 md:py-3 text-[16px] lg:text-[22px] rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)]">
                         Resume
                     </button>
                 </div>

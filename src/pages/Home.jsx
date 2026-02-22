@@ -6,6 +6,7 @@ import Works from '../components/Works';
 import Branding from '../components/Home/Branding';
 import CreativePlayground from '../components/Home/CreativePlayground';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Services />
             <CreativePlayground />
             <Contact />
+            <Footer />
         </main>
     );
 };
