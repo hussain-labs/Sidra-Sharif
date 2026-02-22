@@ -51,7 +51,7 @@ const CreativePlayground = () => {
   ];
 
   return (
-    <section className="bg-void-black py-24 px-4 overflow-hidden relative min-h-[1200px]">
+    <section className="bg-void-black py-24 px-4 overflow-hidden relative">
       {/* Professional Background Glows matching the reference */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[20%] left-[-10%] w-[40%] h-[40%] bg-sky-blue/10 blur-[180px] rounded-full"></div>
@@ -71,12 +71,12 @@ const CreativePlayground = () => {
         </div>
 
         {/* Desktop: 5-column Flex Cluster (No overlaps) */}
-        <div className="hidden md:flex justify-center items-start gap-4">
+        <div className="flex justify-center items-start lg:gap-4 gap-2">
           {columns.map((col, colIndex) => {
             // Apply vertical offsets to create the "cloud" cluster shape
             let mtClass = "";
-            if (colIndex === 0 || colIndex === 4) mtClass = "mt-[160px]";
-            else if (colIndex === 1 || colIndex === 3) mtClass = "mt-[80px]";
+            if (colIndex === 0 || colIndex === 4) mtClass = "lg:mt-[160px] mt-[60px]";
+            else if (colIndex === 1 || colIndex === 3) mtClass = "lg:mt-[80px] mt-7";
 
             return (
               <div key={colIndex} className={`flex flex-col gap-4 ${mtClass}`}>
@@ -98,7 +98,7 @@ const CreativePlayground = () => {
         </div>
 
         {/* Mobile: 2-column Staggered Grid */}
-        <div className="md:hidden grid grid-cols-2 gap-4">
+        {/* <div className="md:hidden grid grid-cols-2 gap-4">
           <div className="flex flex-col gap-4">
             {columns.flatMap(c => c).filter((_, i) => i % 2 === 0).map((item) => (
               <div key={item.id} className="w-full rounded-[24px] border-[3px] border-white overflow-hidden shadow-2xl">
@@ -113,7 +113,7 @@ const CreativePlayground = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
