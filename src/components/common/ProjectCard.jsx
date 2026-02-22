@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ image, title, description, onOpen, btnColor = "bg-electric-cyan" }) => {
+const ProjectCard = ({ link, image, title, description, onOpen, btnColor = "bg-electric-cyan" }) => {
     return (
         <div className="relative w-full max-w-[400px] aspect-4/5 rounded-[40px] border-[3px] border-sky-blue overflow-hidden group hover:scale-[1.02] transition-transform duration-500 shadow-2xl">
             {/* Background Image Section */}
@@ -24,12 +25,21 @@ const ProjectCard = ({ image, title, description, onOpen, btnColor = "bg-electri
                     </p>
                 </div>
 
-                <button
-                    onClick={onOpen}
-                    className={`w-full py-3 rounded-xl ${btnColor} ${(btnColor === 'bg-white' || btnColor === 'bg-electric-cyan') ? 'text-void-black' : 'text-white'} font-bold uppercase tracking-wider text-sm hover:opacity-90 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer shadow-[0_0_20px_rgba(0,229,255,0.2)]`}
-                >
-                    Open Project
-                </button>
+                {link ? (
+                    <Link
+                        to={link}
+                        className={`w-full py-3 rounded-xl flex justify-center items-center ${btnColor} ${(btnColor === 'bg-white' || btnColor === 'bg-electric-cyan') ? 'text-void-black' : 'text-white'} font-bold uppercase tracking-wider text-sm hover:opacity-90 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer shadow-[0_0_20px_rgba(0,229,255,0.2)]`}
+                    >
+                        Open Project
+                    </Link>
+                ) : (
+                    <button
+                        onClick={onOpen}
+                        className={`w-full py-3 rounded-xl ${btnColor} ${(btnColor === 'bg-white' || btnColor === 'bg-electric-cyan') ? 'text-void-black' : 'text-white'} font-bold uppercase tracking-wider text-sm hover:opacity-90 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer shadow-[0_0_20px_rgba(0,229,255,0.2)]`}
+                    >
+                        Open Project
+                    </button>
+                )}
             </div>
         </div>
     );

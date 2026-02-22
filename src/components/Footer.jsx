@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaLinkedinIn, FaBehance } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaBehance, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
@@ -11,9 +11,9 @@ const Footer = () => {
                 <div className="mb-20">
                     <h3 className="text-white text-3xl font-bold text-center mb-10">Follow me</h3>
 
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-6">
+                    <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
                         {/* Instagram Card */}
-                        <a href="https://www.instagram.com/studio_graphics29/" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
+                        <a href="https://www.instagram.com/studio_graphics29/" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] lg:w-[300px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
                             <div className="bg-black w-12 h-12 rounded-xl flex justify-center items-center text-white shrink-0">
                                 <FaInstagram className="text-2xl" />
                             </div>
@@ -24,7 +24,7 @@ const Footer = () => {
                         </a>
 
                         {/* LinkedIn Card */}
-                        <a href="https://www.linkedin.com/in/sidra-the-designer" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
+                        <a href="https://www.linkedin.com/in/sidra-the-designer" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] lg:w-[300px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
                             <div className="bg-black w-12 h-12 rounded-xl flex justify-center items-center text-white shrink-0">
                                 <FaLinkedinIn className="text-2xl" />
                             </div>
@@ -35,12 +35,23 @@ const Footer = () => {
                         </a>
 
                         {/* Behance Card */}
-                        <a href="https://www.behance.net/sidrasharif797" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
+                        <a href="https://www.behance.net/sidrasharif797" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] lg:w-[300px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
                             <div className="bg-black w-12 h-12 rounded-xl flex justify-center items-center text-white shrink-0">
                                 <FaBehance className="text-2xl" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-black font-bold text-xl">Behance</span>
+                                <span className="text-gray-500 text-sm">Sidra Sharif</span>
+                            </div>
+                        </a>
+
+                        {/* YouTube Card */}
+                        <a href="https://youtube.com/@studiographic29" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] lg:w-[300px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
+                            <div className="bg-black w-12 h-12 rounded-xl flex justify-center items-center text-white shrink-0">
+                                <FaYoutube className="text-2xl" />
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-black font-bold text-xl">Youtube</span>
                                 <span className="text-gray-500 text-sm">Sidra Sharif</span>
                             </div>
                         </a>
@@ -74,7 +85,7 @@ const Footer = () => {
 
                     {/* Copyright & Date */}
                     <div className="text-gray-500 text-xs md:text-sm whitespace-nowrap">
-                        2025 Sidrasharif
+                        @sidrathedesigner
                     </div>
                 </div>
 

@@ -6,6 +6,7 @@ import cheeziousImg from '../assets/images/cheezious.png';
 const Works = () => {
     const projects = [
         {
+            link: '/chatcraze',
             title: "ChaatCraze App (Case Study)",
             description: "From napkin sketch to high-fidelity prototype. A hyper-local street food delivery solution.",
             image: chaatCrazeImg
