@@ -59,7 +59,7 @@ const CreativePlayground = () => {
         <div className="absolute bottom-[0%] right-[-5%] w-[45%] h-[70%] bg-electric-cyan/25 blur-[150px] rounded-full"></div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto relative z-10">
+      <div className="max-w-[1420px] mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16 md:mb-24">
           <h2 className="text-4xl md:text-7xl font-extrabold tracking-tighter mb-6 text-white leading-tight">

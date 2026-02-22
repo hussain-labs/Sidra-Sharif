@@ -74,14 +74,14 @@ const Services = () => {
 
     return (
         <section className="bg-linear-to-b from-white to-sky-50 py-24 px-4 sm:px-6 lg:px-8 font-sans">
-            <div className="max-w-[1400px] mx-auto">
+            <div className="max-w-[1920px] mx-auto">
                 <div className="text-center mb-20">
                     <h2 className="text-5xl md:text-6xl font-extrabold text-black tracking-tight">
                         Services <span className="text-sky-400">I Offer</span>
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-15 lg:gap-12">
                     {/* Card 1: UI/UX */}
                     <div className="bg-white rounded-[40px] p-8 lg:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
                         <div className="relative -mt-[84px]">
