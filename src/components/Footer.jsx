@@ -65,9 +65,11 @@ const Footer = () => {
                     {/* Navigation Links */}
                     <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:gap-8">
                         <a href="#about" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">About</a>
-                        <a href="#gallery" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Work</a>
+                        <a href="#work" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Work</a>
                         <a href="#contact" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Contact</a>
                         <a href="#services" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Services</a>
+                        <a href="#gallery" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Gallery</a>
+
                     </div>
 
                     {/* Copyright & Date */}

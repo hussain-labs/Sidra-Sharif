@@ -1,10 +1,12 @@
 import Button from '../common/Button';
 import Navbar from './Navbar';
 import bgImg from '../../assets/images/Bgimg.png';
+import { useNavigate } from 'react-router-dom';
 // import img1 from '../../assets/images/left_herovector.png';
 // import img2 from '../../assets/images/right_herovector.png';
 
 const Hero = () => {
+    const navigate = useNavigate();
     return (
         <div
             id="home"
@@ -33,10 +35,10 @@ const Hero = () => {
 
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-16 relative z-20">
                         <Button className="w-full sm:w-auto px-8 md:px-10 rounded-[15px] py-3 md:py-4 text-base md:text-lg">
-                            View My Work
+                            <a href='#work'>View My Work</a>
                         </Button>
                         <Button variant="outline" className="w-full sm:w-auto px-8 md:px-10 rounded-[15px] py-3 md:py-4 text-base md:text-lg">
-                            Let's Collaborate
+                            <a href='#contact'>Let's Collaborate</a>
                         </Button>
                     </div>
 
