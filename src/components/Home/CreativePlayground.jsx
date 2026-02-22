@@ -71,19 +71,19 @@ const CreativePlayground = () => {
         </div>
 
         {/* Desktop: 5-column Flex Cluster (No overlaps) */}
-        <div className="flex justify-center items-start lg:gap-4 gap-2">
+        <div className="flex justify-center items-start sm:gap-4 gap-2">
           {columns.map((col, colIndex) => {
             // Apply vertical offsets to create the "cloud" cluster shape
             let mtClass = "";
-            if (colIndex === 0 || colIndex === 4) mtClass = "lg:mt-[160px] mt-[60px]";
-            else if (colIndex === 1 || colIndex === 3) mtClass = "lg:mt-[80px] mt-7";
+            if (colIndex === 0 || colIndex === 4) mtClass = "md:mt-[160px] sm:mt-[100px] mt-[60px]";
+            else if (colIndex === 1 || colIndex === 3) mtClass = "md:mt-[80px] sm:mt-[60px] mt-7";
 
             return (
-              <div key={colIndex} className={`flex flex-col gap-4 ${mtClass}`}>
+              <div key={colIndex} className={`flex flex-col sm:gap-4 gap-2 ${mtClass}`}>
                 {col.map((item) => (
                   <div
                     key={item.id}
-                    className="w-full rounded-[15px] border-[2px] border-white overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.6)] transform transition-transform duration-500 hover:scale-[1.05] hover:z-20"
+                    className="w-full sm:rounded-[15px] rounded-[10px] border-[2px] border-white overflow-hidden shadow-[0_12px_40px_rgba(0,0,0,0.6)] transform transition-transform duration-500 hover:scale-[1.05] hover:z-20"
                   >
                     <img
                       src={item.src}
