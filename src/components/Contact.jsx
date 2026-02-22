@@ -17,7 +17,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="bg-void-black py-24 px-4 sm:px-6 lg:px-8 font-sans relative overflow-hidden">
+        <section id="contact" className="bg-void-black py-24 px-4 sm:px-6 lg:px-8 font-sans relative overflow-hidden">
             <div className="max-w-[1920px] mx-auto relative z-10">
                 <div className="bg-[#0B1C26] rounded-[48px] p-8 md:p-16 shadow-[0_20px_60px_rgba(0,0,0,0.6)] border border-gray-800/50">
                     <div className="text-center mb-12">

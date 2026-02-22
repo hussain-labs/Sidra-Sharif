@@ -5,10 +5,10 @@ import logo from '../../assets/images/logo.png';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navLinks = [
-        { name: 'About', path: '/' },
-        { name: 'Work', path: '/projects' },
-        { name: 'Contact', path: '#' },
-        { name: 'Services', path: '#' },
+        { name: 'About', path: '#about' },
+        { name: 'Work', path: '#gallery' },
+        { name: 'Contact', path: '#contact' },
+        { name: 'Services', path: '#services' },
     ];
     const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -16,24 +16,24 @@ const Navbar = () => {
         <nav className="max-w-[1574px] w-full mx-auto md:mt-[20px] z-50 fixed top-0 left-0 right-0 md:px-2 2xl:px-0">
             <div className="bg-[#040A13] h-[90px] lg:h-[116px] rounded-none md:rounded-full px-4 sm:px-8 flex justify-between items-center relative">
                 {/* Logo Section */}
-                <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+                <a href="/" className="flex items-center hover:opacity-80 transition-opacity">
                     <img src={logo} alt="Logo" className="h-[60px] lg:h-[80px] object-contain " />
                     <div className="flex flex-col">
                         <span className="text-white font-bold text-sm md:text-lg">Sidra Sharif</span>
                         <span className="text-slate-400 uppercase text-xs md:text-base">UI/UX Designer</span>
                     </div>
-                </Link>
+                </a>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-15">
                     {navLinks.map(link => (
-                        <Link
+                        <a
                             key={link.name}
-                            to={link.path}
+                            href={link.path}
                             className="text-slate-300 hover:text-electric-cyan transition-colors text-sm font-medium uppercase tracking-wider"
                         >
                             {link.name}
-                        </Link>
+                        </a>
                     ))}
                 </div>
 
@@ -62,14 +62,14 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden absolute top-[80px] left-0 w-full bg-[#040A13] border-t border-slate-800 p-4 flex flex-col items-center gap-4 shadow-lg animate-fade-in-down z-50">
                     {navLinks.map(link => (
-                        <Link
+                        <a
                             key={link.name}
-                            to={link.path}
+                            href={link.path}
                             className="text-slate-300 hover:text-electric-cyan transition-colors text-sm font-medium uppercase tracking-wider"
                             onClick={() => setIsOpen(false)}
                         >
                             {link.name}
-                        </Link>
+                        </a>
                     ))}
                     <button className="px-6 py-2 w-full rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all">
                         Resume

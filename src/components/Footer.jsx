@@ -5,7 +5,7 @@ import logo from '../assets/images/logo.png';
 
 const Footer = () => {
     return (
-        <footer className="bg-void-black py-16 px-4 sm:px-6 lg:px-8 font-sans">
+        <footer id="footer" className="bg-void-black py-16 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-[1574px] mx-auto">
                 {/* Follow Me Section */}
                 <div className="mb-20">
@@ -13,18 +13,18 @@ const Footer = () => {
 
                     <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                         {/* Instagram Card */}
-                        <a href="#" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
+                        <a href="https://www.instagram.com/studio_graphics29/" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
                             <div className="bg-black w-12 h-12 rounded-xl flex justify-center items-center text-white shrink-0">
                                 <FaInstagram className="text-2xl" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-black font-bold text-xl">Instagram</span>
-                                <span className="text-gray-500 text-sm">@studio.graphics29</span>
+                                <span className="text-gray-500 text-sm">@studio_graphics29</span>
                             </div>
                         </a>
 
                         {/* LinkedIn Card */}
-                        <a href="#" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
+                        <a href="https://www.linkedin.com/in/sidra-the-designer" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
                             <div className="bg-black w-12 h-12 rounded-xl flex justify-center items-center text-white shrink-0">
                                 <FaLinkedinIn className="text-2xl" />
                             </div>
@@ -35,7 +35,7 @@ const Footer = () => {
                         </a>
 
                         {/* Behance Card */}
-                        <a href="#" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
+                        <a href="https://www.behance.net/sidrasharif797" target="_blank" className="bg-white rounded-[20px] p-6 flex items-center gap-4 w-full md:w-[320px] hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,255,255,0.1)] transition-all duration-300">
                             <div className="bg-black w-12 h-12 rounded-xl flex justify-center items-center text-white shrink-0">
                                 <FaBehance className="text-2xl" />
                             </div>
@@ -64,10 +64,10 @@ const Footer = () => {
 
                     {/* Navigation Links */}
                     <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 md:gap-8">
-                        <Link to="/" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">About</Link>
-                        <Link to="/projects" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Work</Link>
-                        <a href="#" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Contact</a>
-                        <a href="#" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Services</a>
+                        <a href="#about" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">About</a>
+                        <a href="#gallery" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Work</a>
+                        <a href="#contact" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Contact</a>
+                        <a href="#services" className="text-gray-400 hover:text-white text-sm font-medium transition-colors">Services</a>
                     </div>
 
                     {/* Copyright & Date */}

@@ -73,7 +73,7 @@ const Services = () => {
 
 
     return (
-        <section className="bg-linear-to-b from-white to-sky-50 py-24 px-4 sm:px-6 lg:px-8 font-sans">
+        <section id="services" className="bg-linear-to-b from-white to-sky-50 py-24 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-[1920px] mx-auto">
                 <div className="text-center mb-20">
                     <h2 className="text-5xl md:text-6xl font-extrabold text-black tracking-tight">

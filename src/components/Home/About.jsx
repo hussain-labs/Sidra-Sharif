@@ -3,7 +3,7 @@ import laptopImg from '../../assets/images/laptop_mockup_refined.png';
 
 const About = () => {
     return (
-        <section className="bg-void-black text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
+        <section id="about" className="bg-void-black text-white py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
             <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                 {/* Left Side: Laptop Graphic */}
                 <div className="relative flex justify-center items-center py-10 lg:py-20">

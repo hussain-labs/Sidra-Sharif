@@ -7,6 +7,7 @@ import bgImg from '../../assets/images/Bgimg.png';
 const Hero = () => {
     return (
         <div
+            id="home"
             className="w-full max-w-[1920px] h-screen max-h-[1219px] text-white overflow-hidden flex flex-col bg-cover bg-right md:bg-center bg-no-repeat mx-auto relative"
             style={{ backgroundImage: `url(${bgImg})`, backgroundColor: '#050505' }}
         >

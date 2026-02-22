@@ -26,7 +26,7 @@ const Branding = () => {
     ];
 
     return (
-        <section className="bg-white py-24 px-4 md:px-8 lg:px-16 overflow-hidden">
+        <section id='branding' className="bg-white py-24 px-4 md:px-8 lg:px-16 overflow-hidden">
             <div className="max-w-[1920px] mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-16">
