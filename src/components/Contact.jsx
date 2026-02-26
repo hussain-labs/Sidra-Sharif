@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
         email: '',
         message: ''
     });
+    const [status, setStatus] = useState(''); // 'sending', 'success', 'error'
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -12,8 +14,35 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('Form submitted:', formData);
-        // Add form submission logic here
+        setStatus('sending');
+
+        // Replace these with your actual EmailJS credentials
+        const serviceID = 'service_o9i4xss';
+        const templateID = 'template_dy97l39';
+        const publicKey = 'aHu0DrOUw02xJGvrt';
+
+        // Assuming your EmailJS template uses {{user_email}} and {{message}}
+        const templateParams = {
+            user_email: formData.email,
+            message: formData.message,
+        };
+
+        emailjs.send(serviceID, templateID, templateParams, publicKey)
+            .then((response) => {
+                console.log('Email sent successfully!', response.status, response.text);
+                setStatus('success');
+                setFormData({ email: '', message: '' }); // Reset form
+
+                // Hide success message after 5 seconds
+                setTimeout(() => setStatus(''), 5000);
+            })
+            .catch((error) => {
+                console.error('Failed to send email:', error);
+                setStatus('error');
+
+                // Hide error message after 5 seconds
+                setTimeout(() => setStatus(''), 5000);
+            });
     };
 
     return (
@@ -55,12 +84,36 @@ const Contact = () => {
                             ></textarea>
                         </div>
 
+                        {status === 'success' && (
+                            <div className="text-green-400 text-center font-medium bg-green-900/30 py-3 rounded-lg border border-green-500/50">
+                                Message sent successfully! I will get back to you soon.
+                            </div>
+                        )}
+                        {status === 'error' && (
+                            <div className="text-red-400 text-center font-medium bg-red-900/30 py-3 rounded-lg border border-red-500/50">
+                                Failed to send message. Please double check your EmailJS configuration.
+                            </div>
+                        )}
+
                         <div className="text-center mt-10">
                             <button
                                 type="submit"
-                                className="bg-electric-cyan text-void-black font-bold text-lg px-10 py-4 rounded-xl hover:bg-cyan-300 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(0,229,255,0.3)]"
+                                disabled={status === 'sending'}
+                                className={`font-bold text-lg px-10 py-4 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(0,229,255,0.3)] flex items-center justify-center gap-3 mx-auto
+                                    ${status === 'sending'
+                                        ? 'bg-sky-blue/80 text-void-black cursor-wait opacity-80'
+                                        : 'bg-electric-cyan text-void-black hover:bg-cyan-300 hover:scale-105'}
+                                `}
                             >
-                                Send Message
+                                {status === 'sending' ? (
+                                    <>
+                                        <svg className="animate-spin h-5 w-5 text-void-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        Sending...
+                                    </>
+                                ) : 'Send Message'}
                             </button>
                         </div>
                     </form>
