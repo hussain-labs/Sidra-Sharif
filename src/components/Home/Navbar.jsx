@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
+import cv from '../../assets/cv/Sidra Sharif.pdf';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -39,9 +40,9 @@ const Navbar = () => {
 
                 {/* Resume Button (Desktop) */}
                 <div className="hidden md:block">
-                    <button className="px-4 lg:px-6 xl:px-10 py-2 md:py-3 text-[16px] lg:text-[22px] rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)]">
+                    <a href={cv} download="Sidra Sharif.pdf" className="inline-block px-4 lg:px-6 xl:px-10 py-2 md:py-3 text-[16px] lg:text-[22px] rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all shadow-[0_0_10px_rgba(0,229,255,0.2)]">
                         Resume
-                    </button>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Toggle */}
@@ -71,9 +72,9 @@ const Navbar = () => {
                             {link.name}
                         </a>
                     ))}
-                    <button className="px-6 py-2 w-full rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all">
+                    <a href={cv} download="Sidra_Sharif_Resume.pdf" className="block text-center px-6 py-2 w-full rounded-lg border border-electric-cyan text-electric-cyan font-bold hover:bg-electric-cyan hover:text-void-black transition-all">
                         Resume
-                    </button>
+                    </a>
                 </div>
             )}
         </nav>
