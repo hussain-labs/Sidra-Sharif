@@ -12,7 +12,7 @@ const UserFlowSection = () => (
             </h2>
 
             {/* Diagram image — responsive, max width capped, centred */}
-            <div className="mx-auto w-full max-w-[1100px]">
+            <div className="mx-auto w-full max-w-[1920px]">
                 <img
                     src={userFlowImg}
                     alt="ChaatCraze User Flow Sitemap"

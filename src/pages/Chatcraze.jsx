@@ -8,6 +8,8 @@ import IdeationSection from '../components/chatcraze/IdeationSection';
 import MoodBoard from '../components/chatcraze/MoodBoard';
 import TypographySection from '../components/chatcraze/TypographySection';
 import UserFlowSection from '../components/chatcraze/UserFlowSection';
+import WireframingSection from '../components/chatcraze/WireframingSection';
+import PrototypingSection from '../components/chatcraze/PrototypingSection';
 
 const Chatcraze = () => {
     useEffect(() => {
@@ -24,6 +26,8 @@ const Chatcraze = () => {
             <MoodBoard />
             <TypographySection />
             <UserFlowSection />
+            <WireframingSection />
+            <PrototypingSection />
         </main>
     );
 };
