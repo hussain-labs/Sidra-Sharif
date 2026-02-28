@@ -20,6 +20,23 @@ body {
   min-height: 100vh;
   background-color: var(--color-void-black);
   color: #FFFFFF;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE / Edge */
+}
+
+/* Chrome, Safari, Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar on all elements but keep scroll working */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes fade-in-up {
