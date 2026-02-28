@@ -10,6 +10,9 @@ import TypographySection from '../components/chatcraze/TypographySection';
 import UserFlowSection from '../components/chatcraze/UserFlowSection';
 import WireframingSection from '../components/chatcraze/WireframingSection';
 import PrototypingSection from '../components/chatcraze/PrototypingSection';
+import SplashScreenSection from '../components/chatcraze/SplashScreenSection';
+import LoginSection from '../components/chatcraze/LoginSection';
+import HomeScreenSection from '../components/chatcraze/HomeScreenSection';
 
 const Chatcraze = () => {
     useEffect(() => {
@@ -28,6 +31,9 @@ const Chatcraze = () => {
             <UserFlowSection />
             <WireframingSection />
             <PrototypingSection />
+            <SplashScreenSection />
+            <LoginSection />
+            <HomeScreenSection />
         </main>
     );
 };

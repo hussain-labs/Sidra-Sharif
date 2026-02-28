@@ -6,7 +6,7 @@ const HeroSection = () => (
         <img
             src={heroImg}
             alt="ChaatCraze Hero"
-            className="max-w-[1920px] h-[500px] md:h-[600px] lg:h-[800px] xl:h-full object-cover"
+            className="max-w-full h-[500px] md:h-[600px] lg:h-[800px] xl:h-full object-cover"
         />
     </section>
 );
