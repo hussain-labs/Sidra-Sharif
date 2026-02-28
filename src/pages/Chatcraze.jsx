@@ -13,6 +13,8 @@ import PrototypingSection from '../components/chatcraze/PrototypingSection';
 import SplashScreenSection from '../components/chatcraze/SplashScreenSection';
 import LoginSection from '../components/chatcraze/LoginSection';
 import HomeScreenSection from '../components/chatcraze/HomeScreenSection';
+import OrderProcessSection from '../components/chatcraze/OrderProcessSection';
+import ThankYouSection from '../components/chatcraze/ThankYouSection';
 
 const Chatcraze = () => {
     useEffect(() => {
@@ -34,6 +36,8 @@ const Chatcraze = () => {
             <SplashScreenSection />
             <LoginSection />
             <HomeScreenSection />
+            <OrderProcessSection />
+            <ThankYouSection />
         </main>
     );
 };
