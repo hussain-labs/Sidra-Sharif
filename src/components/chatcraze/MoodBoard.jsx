@@ -92,6 +92,7 @@ const pct = (v, max) => `${(v / max) * 100}%`;
 // ── Component ─────────────────────────────────────────────────────
 const MoodBoard = () => (
     <section className="w-full bg-[#F5EEEE] py-20 md:py-28 px-4 md:px-10">
+
         <div className="max-w-[1920px] mx-auto">
 
             <h2 className="text-4xl md:text-[48px] font-extrabold text-black text-center mb-14 md:mb-20 tracking-tight">
